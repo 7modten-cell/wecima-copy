@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
+<title>الصفحة غير موجودة — MYCIMA</title>
+<style>
+  :root{
+    --main-bg-color:#0c0f21;
+    --blue-color:#5367ff;
+    --light-color:#8f8d8d;
+    --bg-white:#fafafa;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:var(--main-bg-color);
+    color:var(--bg-white);
+    font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    text-align:center;
+  }
+  .box{max-width:520px;width:100%}
+  .code{
+    font-size:72px;
+    font-weight:800;
+    line-height:1;
+    color:var(--blue-color);
+    margin:0 0 12px;
+  }
+  h1{font-size:22px;margin:0 0 10px;font-weight:800}
+  p{color:var(--light-color);font-size:15px;line-height:1.9;margin:0 0 26px}
+  .btn{
+    display:inline-block;
+    padding:12px 26px;
+    border-radius:10px;
+    background:var(--blue-color);
+    color:#fff;
+    text-decoration:none;
+    font-weight:800;
+    font-size:14px;
+    transition:opacity .2s ease;
+  }
+  .btn:hover{opacity:.88}
+</style>
+</head>
+<body>
+  <main class="box">
+    <p class="code">404</p>
+    <h1>هذه الصفحة غير متوفرة في النسخة الحالية</h1>
+    <p>
+      الصفحة التي تحاول الوصول إليها لم يتم نسخها إلي هذا المستودع بعد.<br>
+      النسخة الحالية تحتوي علي الصفحة الرئيسية فقط، وبقية الروابط ستعمل بعد إضافة صفحاتها.
+    </p>
+    <a class="btn" id="homeLink" href="./">العودة إلي الصفحة الرئيسية</a>
+  </main>
+
+  <script>
+    /* GitHub Pages serves this file for any missing path, so the browser URL can be
+       any depth deep. Resolve the site root explicitly instead of relying on "./".
+       REPO = the repository name when published as a *project* page
+       (https://USER.github.io/REPO/). If you rename the repo or use a custom
+       domain, change this one constant. */
+    (function () {
+      var REPO = "wecima-copy";
+      var parts = location.pathname.split("/").filter(Boolean);
+      var root = (parts[0] === REPO) ? "/" + REPO + "/" : "/";
+      document.getElementById("homeLink").setAttribute("href", root);
+    })();
+  </script>
+</body>
+</html>
